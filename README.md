@@ -1,4 +1,21 @@
-Navigate to the "Document Management" tab, click "Add Files", and a new row appears with fields: Label, Description, File Status, Case Type, Charge ID, Activity, and Attach Receipt. Fill in the required values (e.g., Label from picklist, Description [optional], Status as Final/Draft/Discard, Charge ID, Activity). Click "Upload File" to select a file from the desktop, then click "Done" and "Save". Use the Documents Filters section to apply filters (Label, Status, Stage), click "View File", then go to the Document Update History section, click "Refresh", and verify the record.
+@And("I verify all sections are disabled under {string} tab for process type {string}")
+public void i_verify_all_sections_disabled_under_tab(String tabName, String processType) 
+        throws XMLStreamException, FileNotFoundException {
 
-Expected Result:
-A new upload row is displayed upon clicking "Add Files". All details can be entered correctly. Uploading a file opens the desktop file selector, and the selected file name is shown in the "Selected File" field. After saving, a success toast message appears (“Success: 1 Files Added Successfully”), and the record is created under the Documents section with the selected attributes. The file is visible based on the applied filters, and the Document Update History shows the correct file name and created date.
+    // Click on the Security tab
+    pswStepDefinitionHelperWebClassInstance.clickOnElementOnScreen(field: tabName, screenName: "ProcessInfoTab");
+
+    // List of section field names under the Security tab (adjust based on actual identifiers in your system)
+    List<String> sectionFields = Arrays.asList(
+        "securityDetailsSection",
+        "partyDetailsSection",
+        "guaranteeDetailsSection",
+        "signerDetailsSection",
+        "companyOutcomesSection"
+    );
+
+    for (String section : sectionFields) {
+        pswStepDefinitionHelperWebClassInstance.genIsEnabledWebElement(field: section, action: "disabled", screenName: tabName);
+        logger.info(section + " is verified as readonly under tab: " + tabName + " for process: " + processType);
+    }
+}
