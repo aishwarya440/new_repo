@@ -1,12 +1,6 @@
-JavascriptExecutor js = (JavascriptExecutor) driver;
+List<String> tabNames = slotItems.stream()
+        .map(slot -> (String) js.executeScript("return arguments[0].assignedNodes()[0].textContent.trim()", slot))
+        .collect(Collectors.toList());
 
-WebElement shadowHost = driver.findElement(By.cssSelector("lightning-accordion-section"));
-SearchContext shadowRoot = (SearchContext) js.executeScript("return arguments[0].shadowRoot", shadowHost);
-
-// Then find the <slot> inside shadowRoot
-List<WebElement> slotItems = shadowRoot.findElements(By.cssSelector("slot"));
-
-for (WebElement slot : slotItems) {
-    String text = (String) js.executeScript("return arguments[0].assignedNodes()[0].textContent.trim()", slot);
-    System.out.println("Tab: " + text);
-}
+    // 5. Return the result
+    return tabNames;
