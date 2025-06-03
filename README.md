@@ -1,16 +1,12 @@
-// Cast driver to JavaScriptExecutor
 JavascriptExecutor js = (JavascriptExecutor) driver;
 
-// 1. Get the shadow host (the lightning component)
 WebElement shadowHost = driver.findElement(By.cssSelector("lightning-accordion-section"));
+SearchContext shadowRoot = (SearchContext) js.executeScript("return arguments[0].shadowRoot", shadowHost);
 
-// 2. Access shadow root
-WebElement shadowRoot = (WebElement) js.executeScript("return arguments[0].shadowRoot", shadowHost);
+// Then find the <slot> inside shadowRoot
+List<WebElement> slotItems = shadowRoot.findElements(By.cssSelector("slot"));
 
-// 3. Get the <slot> inside shadow DOM
-WebElement slot = shadowRoot.findElement(By.cssSelector("slot"));
-
-// 4. Get assigned text from <slot>
-String text = (String) js.executeScript("return arguments[0].assignedNodes()[0].textContent.trim()", slot);
-
-System.out.println("Text from slot: " + text);
+for (WebElement slot : slotItems) {
+    String text = (String) js.executeScript("return arguments[0].assignedNodes()[0].textContent.trim()", slot);
+    System.out.println("Tab: " + text);
+}
