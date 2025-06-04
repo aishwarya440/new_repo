@@ -1,6 +1,10 @@
-List<String> tabNames = slotItems.stream()
-        .map(slot -> (String) js.executeScript("return arguments[0].assignedNodes()[0].textContent.trim()", slot))
-        .collect(Collectors.toList());
 
-    // 5. Return the result
-    return tabNames;
+String slotText = (String) js.executeScript(
+    "const slot = arguments[0];" +
+    "if (!slot) return '';" +
+    "return Array.from(slot.assignedNodes())" +
+    ".map(n => n.textContent.trim())" +
+    ".filter(Boolean)" +
+    ".join('\\n');",
+    securityTabs
+);
