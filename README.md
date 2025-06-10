@@ -1,13 +1,26 @@
+@And("I verify below elements on {string} screen")
+public void verify_multiple_elements_on_screen(String screenName, DataTable dataTable) {
+    List<String> elementList = dataTable.asList();
 
-JavascriptExecutor js = (JavascriptExecutor) driver;
+    for (String elementName : elementList) {
+        try {
+            boolean isDisplayed = genIsDisplayedWebElement(elementName, screenName);
 
-String slotText = (String) js.executeScript(
-    "let slot = arguments[0].shadowRoot.querySelector('slot');" +
-    "return Array.from(slot.assignedNodes())" +
-    "  .filter(n => n.nodeType === Node.TEXT_NODE)" + // Only text
-    "  .map(n => n.textContent.trim())" +
-    "  .join(', ');",
-    shadowHost
-);
-
-System.out.println("Slot text: " + slotText);
+            if (isDisplayed) {
+                logger.info("Element {} on {} is displayed", elementName, screenName);
+                htmlReporterWebClassInstance.reportStep(
+                        "<b>" + screenName + ":</b> Element " + elementName + " exists",
+                        "Element " + elementName + " exists on " + screenName + " screen and is verified successfully",
+                        true, true);
+            } else {
+                logger.warn("Element {} on {} is not displayed", elementName, screenName);
+                htmlReporterWebClassInstance.reportStep(
+                        "<b>" + screenName + ":</b> Element missing",
+                        "Element " + elementName + " does not exist on " + screenName + " screen",
+                        false, true);
+            }
+        } catch (Exception e) {
+            Exceptions.otherException(e.toString(), screenName);
+        }
+    }
+}
