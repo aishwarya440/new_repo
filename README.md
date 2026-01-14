@@ -1,11 +1,25 @@
-Verify Accepted Decision Email Is Triggered for Instant Accepted Application with Fraud Accepted
-Verify Accepted Decision Email Is Triggered When Referred Application Is Approved After Manual Review
-Verify Accepted Decision Email Is Not Triggered If Fraud Decision Is Not Accepted
-Verify Accepted Decision Email Is Sent to Customer’s Business Email Address
-Verify Accepted Decision Email Content Includes Application ID
-Verify PRA Small Template Is Used in Accepted Decision Email
-Verify Email Retry Mechanism When Accepted Decision Email Fails Due to Network or Service Issue
-Verify System Logs Failure When Accepted Decision Email Retry Is Unsuccessful
-Verify Accepted Decision Email Success Event Is Logged with Timestamp, Email ID, and Status
-Verify Accepted Decision Email Is Triggered Only for AZF Journey
-Verify Accepted Decision Email Framework Is Extensible for Future Journeys
+Welcome to Barclays
+
+[Header] We've approved your application
+
+[Body]
+
+We're pleased to let you know we've approved your application for ((Amountil. Your application ID is (ID: Applications
+
+Here's what happens next
+
+Restricted Internal
+
+Please see your final pricing quote (Pricing Tableli
+
+If you're happy to continue, we'll need to confirm your identity and we'll need some more information about your business. You'l need to log in to the portal using your application ID and business email address-you'll need to verify it's you with yn mobile
+
+If you have any questions or need support, please call us on (insert contact number herel. We're here Monday to Friday, from 8.30am to 8pm
+
+If you decide not to go ahead with your application, we'll close it 30 days after your application start date.
+
+<CTA/button> Log into your application
+
+Kind regards
+
+Your Barclays Business team
