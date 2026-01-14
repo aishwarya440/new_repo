@@ -1,26 +1,11 @@
-@And("I verify below elements on {string} screen")
-public void verify_multiple_elements_on_screen(String screenName, DataTable dataTable) {
-    List<String> elementList = dataTable.asList();
-
-    for (String elementName : elementList) {
-        try {
-            boolean isDisplayed = genIsDisplayedWebElement(elementName, screenName);
-
-            if (isDisplayed) {
-                logger.info("Element {} on {} is displayed", elementName, screenName);
-                htmlReporterWebClassInstance.reportStep(
-                        "<b>" + screenName + ":</b> Element " + elementName + " exists",
-                        "Element " + elementName + " exists on " + screenName + " screen and is verified successfully",
-                        true, true);
-            } else {
-                logger.warn("Element {} on {} is not displayed", elementName, screenName);
-                htmlReporterWebClassInstance.reportStep(
-                        "<b>" + screenName + ":</b> Element missing",
-                        "Element " + elementName + " does not exist on " + screenName + " screen",
-                        false, true);
-            }
-        } catch (Exception e) {
-            Exceptions.otherException(e.toString(), screenName);
-        }
-    }
-}
+Verify Accepted Decision Email Is Triggered for Instant Accepted Application with Fraud Accepted
+Verify Accepted Decision Email Is Triggered When Referred Application Is Approved After Manual Review
+Verify Accepted Decision Email Is Not Triggered If Fraud Decision Is Not Accepted
+Verify Accepted Decision Email Is Sent to Customer’s Business Email Address
+Verify Accepted Decision Email Content Includes Application ID
+Verify PRA Small Template Is Used in Accepted Decision Email
+Verify Email Retry Mechanism When Accepted Decision Email Fails Due to Network or Service Issue
+Verify System Logs Failure When Accepted Decision Email Retry Is Unsuccessful
+Verify Accepted Decision Email Success Event Is Logged with Timestamp, Email ID, and Status
+Verify Accepted Decision Email Is Triggered Only for AZF Journey
+Verify Accepted Decision Email Framework Is Extensible for Future Journeys
