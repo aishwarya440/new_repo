@@ -1,8 +1,24 @@
-TC01 – Verify new parameters (expAnnualExpenditure, expAnnualTurnover, atfOmFlag) appear in Assisted Decision payload
-TC02 – Validate expAnnualExpenditure value flows correctly into API request
-TC03 – Validate expAnnualTurnover value flows correctly into API request
-TC04 – Validate atfOmFlag mapping and format (A–Z only, max 5 chars)
-TC05 – Verify system rejects invalid atfOmFlag values
-TC06 – Verify blank/null values for new parameters are handled correctly
-TC07 – Verify Assisted Decision response is successful after adding new fields (no regression)
-TC08 – Verify error handling when new parameter value causes callout failure
+List View Availability
+TC01 – Verify A2F list views appear in the Opportunity list view dropdown
+TC02 – Verify only colleagues (authorized users) can see A2F list views
+TC03 – Verify list view names match business requirement (Pass, Refer, Decline)
+⭐ Eligibility Logic – Pass
+TC04 – Verify ‘Eligibility – Pass’ list view shows opportunities with:
+Eligibility Criteria Reason = Eligible
+Exclusion Criteria Result = Accept
+TC05 – Verify opportunities NOT matching Pass criteria do not appear in Eligibility – Pass
+⭐ Eligibility Logic – Refer
+TC06 – Verify ‘Eligibility – Refer’ list view shows opportunities with:
+Eligibility Criteria Reason = Not Eligible
+Exclusion Criteria Result = Refer
+TC07 – Verify opportunities NOT matching Refer criteria do not appear in Eligibility – Refer
+⭐ Eligibility Logic – Decline
+TC08 – Verify ‘Eligibility – Decline’ list view shows opportunities with:
+Eligibility Criteria Reason = Not Eligible
+Exclusion Criteria Result = Decline
+TC09 – Verify opportunities NOT matching Decline criteria do not appear in Eligibility – Decline
+⭐ General Behavior
+TC10 – Verify records displayed in list views refresh correctly when eligibility fields change
+TC11 – Verify filtering is accurate when multiple opportunities exist
+TC12 – Verify user can sort and take action on records in each list view
+TC13 – Verify list views show correct columns (Opportunity Name, Stage, Eligibility fields etc.)
