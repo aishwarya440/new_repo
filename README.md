@@ -1,8 +1,10 @@
-Verify New DCF Questions are Captured in Question Response Tab for DDD Opportunity
-Verify DCF Question Answers are Stored Correctly in Question Response Tab
-Verify Question Response Details are Updated When DDD Product Application is Completed
-Verify P2P Opportunity is Used for DDD Opportunity Creation
-Verify All New DCF Questions and Responses are Visible in Salesforce Opportunity
-Verify Opportunity Details Remain Accurate After DCF Questionnaire Update
-Verify Multiple DDD Applications Capture Correct DCF Questionnaire Responses
-Verify No Existing Question Response Data is Impacted After DCF Updates
+Verify SFG Consent Check Details are Captured in Salesforce Opportunity
+Verify Fraud Consent Check Details are Captured in Salesforce Opportunity
+Verify Consent Values from API Request are Populated in Opportunity
+Verify Consent Timestamp is Displayed Correctly in Opportunity
+Verify Consent Type is Displayed Correctly in Opportunity
+Verify Consent Checks are Updated After DDD Product Application Completion
+Verify P2P Opportunity is Used for DDD Consent Updates
+Verify Opportunity Displays Accurate SFG and Fraud Consent Details
+Verify Existing Opportunity Data Remains Unaffected After Consent Update
+Verify Consent Information is Captured Successfully for Multiple DDD Applications
