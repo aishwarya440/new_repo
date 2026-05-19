@@ -1,8 +1,9 @@
-Verify Opportunity Status Changes Automatically from Submitted to Closed Won
-Verify Opportunity Moves to DDD Pending Queue After Status Changes to Closed Won
-Verify Automatic Status Transition Occurs for Submitted DDD Applications
-Verify Opportunity is Removed from DDD Queue After Status Update
-Verify Opportunity Appears in DDD Pending Queue After Automatic Transition
-Verify Automatic Transition Works for Multiple DDD Opportunities
-Verify No Manual Intervention is Required for Status Change
-Verify Existing Opportunity Details Remain Unaffected After Automatic Status Transition
+
+Verify Opportunity is Updated with “Submitted” Status on DDD Application Submission
+Verify “Submitted” Status is Assigned After Customer Completes DDD Application
+Verify New Submitted Status is Displayed Correctly on Salesforce Opportunity
+Verify Opportunity Status Update Occurs on Application Submit Action
+Verify P2P Opportunity is Used for Updating Submitted Status
+Verify Existing Opportunity Details Remain Unaffected After Status Update
+Verify Submitted Status is Applied Successfully for Multiple DDD Applications
+Verify Opportunity is Not Updated with Submitted Status Before Application Submission
