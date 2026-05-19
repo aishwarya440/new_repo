@@ -1,10 +1,10 @@
-Verify SFG Consent Check Details are Captured in Salesforce Opportunity
-Verify Fraud Consent Check Details are Captured in Salesforce Opportunity
-Verify Consent Values from API Request are Populated in Opportunity
-Verify Consent Timestamp is Displayed Correctly in Opportunity
-Verify Consent Type is Displayed Correctly in Opportunity
-Verify Consent Checks are Updated After DDD Product Application Completion
-Verify P2P Opportunity is Used for DDD Consent Updates
-Verify Opportunity Displays Accurate SFG and Fraud Consent Details
-Verify Existing Opportunity Data Remains Unaffected After Consent Update
-Verify Consent Information is Captured Successfully for Multiple DDD Applications
+Verify Final CA Decision is Captured on Salesforce Opportunity
+Verify Accept Decision is Captured on Opportunity for Closed Won Status
+Verify Refer Decision is Captured on Opportunity for Closed Won Status
+Verify Decline Decision is Captured on Opportunity for Closed Won Status
+Verify Final Decision is Updated After DDD Application Submission
+Verify Final Decision Field Displays Correct Value on Opportunity
+Verify Final Decision is Captured Only When Opportunity Status is Closed Won
+Verify P2P Opportunity is Used for Capturing Final CA Decision
+Verify Existing Opportunity Data Remains Unaffected After Final Decision Update
+Verify Correct Final Decision is Captured for Multiple DDD Opportunities
