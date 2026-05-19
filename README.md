@@ -1,10 +1,8 @@
-Verify Final CA Decision is Captured on Salesforce Opportunity
-Verify Accept Decision is Captured on Opportunity for Closed Won Status
-Verify Refer Decision is Captured on Opportunity for Closed Won Status
-Verify Decline Decision is Captured on Opportunity for Closed Won Status
-Verify Final Decision is Updated After DDD Application Submission
-Verify Final Decision Field Displays Correct Value on Opportunity
-Verify Final Decision is Captured Only When Opportunity Status is Closed Won
-Verify P2P Opportunity is Used for Capturing Final CA Decision
-Verify Existing Opportunity Data Remains Unaffected After Final Decision Update
-Verify Correct Final Decision is Captured for Multiple DDD Opportunities
+Verify Opportunity Status Changes Automatically from Submitted to Closed Won
+Verify Opportunity Moves to DDD Pending Queue After Status Changes to Closed Won
+Verify Automatic Status Transition Occurs for Submitted DDD Applications
+Verify Opportunity is Removed from DDD Queue After Status Update
+Verify Opportunity Appears in DDD Pending Queue After Automatic Transition
+Verify Automatic Transition Works for Multiple DDD Opportunities
+Verify No Manual Intervention is Required for Status Change
+Verify Existing Opportunity Details Remain Unaffected After Automatic Status Transition
