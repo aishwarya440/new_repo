@@ -1,31 +1,38 @@
-We concluded GenAl testing of summarized response can be achieved in three different ways
 
-1) Using Bedrock-Haiku LLL as judge(Groundedness, Hallucination etc) + programming/manual(PII, Numeric corrections) validation in AWS bedrock itself. The advantage here we do not need to any other LLM or its api key subscription. we can use Haiku itself to wok as LLM as judge.
+Common TC
 
-2) Using any other LLM as judge. It that case we need LLM subscription or API key access.
+AWS_searchContacts
 
-3) Using DeepEval or any other similar library, but again we need to have access to LLM as judge here.
+ECC_searchContacts
 
-Daily Gov...
+AWS_getTranscriptSummary
 
-ures
+ECC_getTranscriptDetails
 
-Dimension will be cover
+Applicability Matrix
 
-1) Faithfulness/Groundedness
+Read Me
 
-2) Hallucination
+To these existing TC from attached file :CRT_4_API_CIT_Xray_Test_Cases
 
-3) PII leakage
+Add new sheet with changes required as per new openAPI details,
 
-4) Completeness
+so i can compare and add TC to specific sheet
 
-5) Correction of outcome/intent
+Add new sheet with changes required as per new openAPI details,
 
-6) Format Compliance/Coherence
+so i can compare and add TC to specific sheet
 
-7) Tone/Bias
+Keep CIT and Regression Sheet
 
-Actions:- 1) we need to finalize the approach and get setup ready like LLM or Bedrock access quickly
+***DONOT REMOVRE ANYTHING**
 
-2) Need to create test data raw script and based on raw script golden summary which will act as reference summary for us.
+Final output:
+
+1. New Excel in xray format
+
+2. Keep Index, CIT and Regression TC as is.
+
+3. New sheet in xray form for changes given in OpenAPI for both CIT and REG- hightlight changes.
+
++
